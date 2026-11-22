@@ -1,8 +1,8 @@
 # Konsel
 
-> A Mac app that puts Claude, ChatGPT, Grok, Copilot, Cursor and Kimi in one chat room. When one AI answers, another reviews it and corrects mistakes. Free, no sign-up.
+> A Mac app that puts Claude, ChatGPT, Grok, Copilot, Cursor and Kimi in one chat room. When one AI answers, another reviews it and corrects mistakes. Free during the beta, no sign-up.
 
-Konsel is a free macOS app by LuluLabs Inc. It runs each AI company's official Mac program (Claude Code, Codex, Grok Build, GitHub Copilot CLI, Cursor CLI, Kimi Code CLI) with the user's own account, so several AIs answer and review each other in one chat. Conversations and memory stay on the user's Mac.
+Konsel is a macOS app by LuluLabs Inc., free during the beta. It runs each AI company's official Mac program (Claude Code, Codex, Grok Build, GitHub Copilot CLI, Cursor CLI, Kimi Code CLI) with the user's own account, so several AIs answer and review each other in one chat. Conversations and memory stay on the user's Mac.
 
 ## Facts
 
@@ -13,7 +13,7 @@ Konsel is a free macOS app by LuluLabs Inc. It runs each AI company's official M
 ## Questions
 
 ### Does it cost anything?
-Konsel is free. Each AI follows its own company's plans. Claude needs a paid plan such as Pro or Max, ChatGPT also works with a free account, and Grok needs SuperGrok or X Premium+. Each answer uses the plan usage of that account.
+Konsel is free during the beta and may become paid after launch. We will tell you 30 days before. Each AI follows its own company's plans. Claude needs a paid plan such as Pro or Max, ChatGPT also works with a free account, and Grok needs SuperGrok or X Premium+. Each answer uses the plan usage of that account.
 
 ### Do I need to sign up?
 There is no Konsel account. You sign in to each AI on its company's own sign-in page. Konsel does not receive or store your password.
@@ -35,4 +35,4 @@ Use "Send feedback" below the chat list or on the My screen. In a chat, say "Tel
 
 ## 한국어
 
-Claude, ChatGPT, Grok, Copilot, Cursor, Kimi를 한 대화방에 연결하는 Mac 앱입니다. 한 AI가 답하면 다른 AI가 검토하고 틀린 부분을 바로잡습니다. 무료이고 회원 가입이 없습니다.
+Claude, ChatGPT, Grok, Copilot, Cursor, Kimi를 한 대화방에 연결하는 Mac 앱입니다. 한 AI가 답하면 다른 AI가 검토하고 틀린 부분을 바로잡습니다. 베타 기간에는 무료이고 회원 가입이 없습니다.
