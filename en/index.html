@@ -74,6 +74,8 @@ summary::-webkit-details-marker{display:none}details p{margin-top:10px;color:var
 .chat figcaption{padding:10px 18px 12px;font-size:14px;color:var(--muted);border-top:1px solid var(--line)}
 .js .m[data-step]{opacity:0;transform:translateY(8px)}
 .js .m[data-step].on{opacity:1;transform:none;transition:opacity .35s ease,transform .35s ease}
+.m.typing p::after{content:'';display:inline-block;width:28px;height:8px;background:radial-gradient(circle,currentColor 3px,transparent 3.5px) 0 50%/9px 8px repeat-x;opacity:.45;animation:dots 1s steps(4) infinite}
+@keyframes dots{from{width:0}to{width:36px}}
 @media (prefers-reduced-motion:reduce){.js .m[data-step]{opacity:1;transform:none}}
 :root{--font:"Gothic A1",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Segoe UI","Malgun Gothic","맑은 고딕","Noto Sans KR","Noto Sans CJK KR",Roboto,"Helvetica Neue",Arial,sans-serif;--display:"Black Han Sans","Konsel Display Fallback",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Segoe UI","Malgun Gothic","맑은 고딕","Noto Sans KR","Noto Sans CJK KR",Roboto,"Helvetica Neue",Arial,sans-serif;
 --bg:#ffc93c;--panel:#fff;--fg:#231f17;--muted:#6f6654;--sub:#463f31;--line:#e2d9c3;--bubble:#fff;--chatbg:#faf6ec;--mine:#231f17;--minefg:#fff8e2;--cx:#3d47c9;--cl:#a64f33;
@@ -233,13 +235,47 @@ footer{padding:28px 0 56px;font-size:13px;color:var(--muted);text-align:center}
   var chat = document.querySelector('.chat'); if (!chat) return;
   var tabs = chat.querySelectorAll('[data-tab]'), panels = chat.querySelectorAll('[data-panel]');
   var timer = 0;
+  // 대화가 실제 채팅처럼 나온다: 사용자 글이 뜨고, AI 칸에 점 세 개가 잠깐 보인 뒤 답이 글자씩 써진다.
+  // 창은 써지는 줄을 따라 내려가되 그 답의 첫 줄을 넘어서는 내려가지 않는다. 사용자가 창을 직접 스크롤하면 따라가지 않는다.
+  function textNodes(el){ var out = [], w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT); while (w.nextNode()) out.push(w.currentNode); return out; }
   function play(panel){
     clearTimeout(timer);
     if (reduce) return;
-    var steps = panel.querySelectorAll('.m[data-step]'), i = 0;
-    for (var k = 0; k < steps.length; k++) steps[k].classList.remove('on');
+    var steps = panel.querySelectorAll('.m[data-step]'), i = 0, touched = false;
+    for (var k = 0; k < steps.length; k++) {
+      var st = steps[k]; st.classList.remove('on', 'typing');
+      if (st._nodes) for (var q = 0; q < st._nodes.length; q++) st._nodes[q].nodeValue = st._full[q];
+    }
     panel.scrollTop = 0;
-    function next(){ if (i >= steps.length) return; steps[i].classList.add('on'); panel.scrollTo({ top: panel.scrollHeight, behavior: 'smooth' }); i++; timer = setTimeout(next, i === 1 ? 900 : 1500); }
+    panel.onwheel = panel.ontouchstart = function(){ touched = true; };
+    function follow(el){
+      if (touched) return;
+      var top = Math.min(el.offsetTop + el.offsetHeight - panel.clientHeight + 16, el.offsetTop - 16);
+      if (top > panel.scrollTop) panel.scrollTop = top;
+    }
+    function next(){
+      if (i >= steps.length) return;
+      var el = steps[i++];
+      var body = el.querySelector('p');
+      if (!el.classList.contains('ai') || !body) {
+        el.classList.add('on'); follow(el);
+        timer = setTimeout(next, 900);
+        return;
+      }
+      if (!el._nodes) { el._nodes = textNodes(body); el._full = el._nodes.map(function(n){ return n.nodeValue; }); }
+      var nodes = el._nodes, full = el._full, ni = 0, ci = 0;
+      for (var z = 0; z < nodes.length; z++) nodes[z].nodeValue = '';
+      el.classList.add('on', 'typing'); follow(el);
+      timer = setTimeout(function tick(){
+        el.classList.remove('typing');
+        if (ni >= nodes.length) { timer = setTimeout(next, 1400); return; }
+        ci = Math.min(full[ni].length, ci + 2);
+        nodes[ni].nodeValue = full[ni].slice(0, ci);
+        if (ci >= full[ni].length) { ni++; ci = 0; }
+        follow(el);
+        timer = setTimeout(tick, 28);
+      }, 900);
+    }
     timer = setTimeout(next, 300);
   }
   if (!reduce) document.documentElement.classList.add('js');
