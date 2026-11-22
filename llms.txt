@@ -19,7 +19,7 @@ Konsel is free during the beta and may become paid after launch. We will tell yo
 During the beta you use Konsel without signing up. You sign in to each AI on its company's own sign-in page. Konsel does not receive or store your password.
 
 ### Where are my conversations stored?
-Only on your Mac. When an AI answers, the conversation is sent to that AI's provider (Anthropic, OpenAI, xAI, GitHub, Cursor, Moonshot AI or Perplexity). When you make images or videos, the prompt goes to the creative service you connected, such as Higgsfield. The company that makes Konsel never receives your conversations.
+Only on your Mac. When an AI answers, the conversation is sent to that AI's provider (Anthropic, OpenAI, xAI, GitHub, Cursor or Moonshot AI). When you make images or videos, the prompt goes to the creative service you connected, such as Higgsfield. The company that makes Konsel never receives your conversations.
 
 ### Can the AIs change my files?
 The AIs can find and read files on your Mac. They cannot change or delete them.
