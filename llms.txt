@@ -1,13 +1,13 @@
 # Konsel
 
-> A Mac app that puts Claude, ChatGPT, Grok, Copilot, Cursor and Kimi in one chat room. When one AI answers, another reviews it and corrects mistakes. Free during the beta, no sign-up.
+> A Mac app that puts Claude, ChatGPT, Grok, Copilot, Cursor and Kimi in one chat room. When one AI answers, another reviews it and corrects mistakes. Free during the beta.
 
 Konsel is a macOS app by LuluLabs Inc., free during the beta. It runs each AI company's official Mac program (Claude Code, Codex, Grok Build, GitHub Copilot CLI, Cursor CLI, Kimi Code CLI) with the user's own account, so several AIs answer and review each other in one chat. Conversations and memory stay on the user's Mac.
 
 ## Facts
 
 - A Mac running macOS 13 or later
-- An account with at least one of Claude, ChatGPT, Grok, GitHub Copilot, Cursor or Kimi. Connect two or more and they answer together.
+- An account with at least one of Claude, ChatGPT, Grok, GitHub Copilot, Cursor or Kimi. Connect two or more and they check each other. Claude needs a paid plan such as Pro or Max.
 - Each answer uses the plan usage of the AI account you connected. Konsel itself charges nothing.
 
 ## Questions
@@ -16,7 +16,7 @@ Konsel is a macOS app by LuluLabs Inc., free during the beta. It runs each AI co
 Konsel is free during the beta and may become paid after launch. We will tell you 30 days before. Each AI follows its own company's plans. Claude needs a paid plan such as Pro or Max, ChatGPT also works with a free account, and Grok needs SuperGrok or X Premium+. Each answer uses the plan usage of that account.
 
 ### Do I need to sign up?
-There is no Konsel account. You sign in to each AI on its company's own sign-in page. Konsel does not receive or store your password.
+During the beta you use Konsel without signing up. You sign in to each AI on its company's own sign-in page. Konsel does not receive or store your password.
 
 ### Where are my conversations stored?
 Only on your Mac. When an AI answers, the conversation is sent to that AI's provider (Anthropic, OpenAI, xAI, GitHub, Cursor, Moonshot AI or Perplexity). When you make images or videos, the prompt goes to the creative service you connected, such as Higgsfield. The company that makes Konsel never receives your conversations.
@@ -31,8 +31,8 @@ Konsel gets answers through each company's official Mac program: Claude Code fro
 Once a day: the app version, the macOS version, the names of the connected AIs, how many messages you sent and answers you got, and at which step and of what type any errors were. Never your conversations, name, email or file paths. It goes to PostHog's servers in Germany. You choose whether to send it when you first open the app, and can change it later in Settings on the My screen.
 
 ### How do I report a problem?
-Use "Send feedback" below the chat list or on the My screen. In a chat, say "Tell them this is annoying" and the AI opens the feedback window with a draft. You can also press "Report this problem" on an error message. Either way, you press Send yourself.
+Use "Send feedback" on the My screen. In a chat, say "Tell them this is annoying" and the AI opens the feedback window with a draft. You can also press "Report this problem" on an error message. Either way, you press Send yourself.
 
 ## 한국어
 
-Claude, ChatGPT, Grok, Copilot, Cursor, Kimi를 한 대화방에 연결하는 Mac 앱입니다. 한 AI가 답하면 다른 AI가 검토하고 틀린 부분을 바로잡습니다. 베타 기간에는 무료이고 회원 가입이 없습니다.
+Claude, ChatGPT, Grok, Copilot, Cursor, Kimi를 한 대화방에 연결하는 Mac 앱입니다. 한 AI가 답하면 다른 AI가 검토하고 틀린 부분을 바로잡습니다. 베타 기간에는 무료입니다.
