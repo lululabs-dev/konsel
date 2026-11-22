@@ -59,7 +59,8 @@ summary::-webkit-details-marker{display:none}details p{margin-top:10px;color:var
 .tabs button:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
 /* 제품 화면처럼 높이가 정해진 대화 창. 탭을 바꿔도 창 크기가 그대로라 페이지가 흔들리지 않고, 긴 대화는 창 안에서 스크롤한다. */
 .panes{position:relative;height:clamp(400px,56vh,540px)}
-.panes>.msgs{position:absolute;inset:0;overflow-y:auto;overscroll-behavior:contain;min-height:0}
+.panes>.msgs{position:absolute;inset:0;overflow-y:auto;overscroll-behavior:contain;min-height:0;scrollbar-width:none}
+.panes>.msgs::-webkit-scrollbar{display:none}
 .msgs[hidden]{display:none}
 @media(max-width:520px){.tabs{gap:6px;padding:10px}.tabs button{padding:9px 12px;font-size:15px}}
 .msgs{padding:20px 18px;display:flex;flex-direction:column;gap:16px;background:var(--chatbg);min-height:var(--msgs-min,0)}
