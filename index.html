@@ -293,7 +293,7 @@ window.konselPhone = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) || (n
       if (top > panel.scrollTop) panel.scrollTop = top;
     }
     function next(){
-      if (i >= steps.length) return;
+      if (i >= steps.length) { timer = setTimeout(advance, 3500); return; }
       var el = steps[i++];
       var body = el.querySelector('p');
       if (!el.classList.contains('ai') || !body) {
@@ -318,13 +318,20 @@ window.konselPhone = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) || (n
     timer = setTimeout(next, 300);
   }
   if (!reduce) document.documentElement.classList.add('js');
-  for (var t = 0; t < tabs.length; t++) tabs[t].addEventListener('click', function(){
-    var n = this.getAttribute('data-tab');
-    for (var k = 0; k < tabs.length; k++) tabs[k].setAttribute('aria-selected', tabs[k] === this ? 'true' : 'false');
+  // 대화 하나가 끝나면 잠시 뒤 다음 대화로 넘어간다(문구 확인 → 코드 확인 → 기획 검토 → 처음). 눌러서 바꿔도 거기서부터 이어 간다.
+  function select(btn){
+    var n = btn.getAttribute('data-tab');
+    for (var k = 0; k < tabs.length; k++) tabs[k].setAttribute('aria-selected', tabs[k] === btn ? 'true' : 'false');
     for (var j = 0; j < panels.length; j++) panels[j].hidden = panels[j].getAttribute('data-panel') !== n;
-    var bt = chat.querySelector('.chatbar b'); if (bt) bt.textContent = this.textContent;
+    var bt = chat.querySelector('.chatbar b'); if (bt) bt.textContent = btn.textContent;
     play(chat.querySelector('[data-panel="' + n + '"]'));
-  });
+  }
+  function advance(){
+    var cur = 0;
+    for (var k = 0; k < tabs.length; k++) if (tabs[k].getAttribute('aria-selected') === 'true') cur = k;
+    select(tabs[(cur + 1) % tabs.length]);
+  }
+  for (var t = 0; t < tabs.length; t++) tabs[t].addEventListener('click', function(){ select(this); });
   play(panels[0]);
 })();
 </script>
