@@ -22,13 +22,13 @@ During the beta you use Konsel without signing up. You sign in to each AI on its
 Only on your Mac. When an AI answers, the conversation is sent to that AI's provider (Anthropic, OpenAI, xAI, GitHub or Cursor). When you make images or videos, the prompt goes to the creative service you connected, such as Higgsfield. The company that makes Konsel never receives your conversations.
 
 ### Can the AIs change my files?
-In a chat without a linked folder, the AIs only read files. When you link a folder, the AIs edit a copy of it, and the original changes only when you merge. You can undo a merge. Commands that change files outside the copy or go online ask for your permission first.
+In a chat without a linked folder, the AIs only read files. When you link a folder, the AIs edit a copy of it, and the original changes only when you merge. You can undo a merge until you push it to GitHub. Commands that change files outside the copy or go online ask for your permission first.
 
 ### Why does the sign-in page say Claude Code, Codex and so on?
 Konsel gets answers through each company's official Mac program: Claude Code from Anthropic for Claude, Codex from OpenAI for ChatGPT, Grok Build from xAI, GitHub Copilot CLI and Cursor CLI. You sign in with the accounts you already use for each AI.
 
 ### What usage data does Konsel send?
-Once a day: the app version, the macOS version, the names of the connected AIs, how many messages you sent and answers you got, and at which step and of what type any errors were. Never your conversations, name, email or file paths. It goes to PostHog's servers in Germany. You choose whether to send it when you first open the app, and can change it later in Settings on the My screen.
+Once a day: the app version, the macOS version, the display language, an install ID, the names of the connected AIs, and how many times you opened the app, messages you sent, answers you got, new chats and documents you saved. Installs, AI connections, unfinished sign-ins and errors are sent by type only when they happen, up to 10 a day. Never your conversations, name, email or file paths. It goes to PostHog's servers in Germany. You choose whether to send it when you first open the app, and can change it later in Settings on the My screen.
 
 ### How do I report a problem?
 Use "Send feedback" on the My screen. In a chat, say "Tell them this is annoying" and the AI opens the feedback window with a draft. You can also press "Report this problem" on an error message. Either way, you press Send yourself.
