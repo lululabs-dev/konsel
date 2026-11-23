@@ -1,6 +1,6 @@
 # Konsel
 
-> A Mac app that puts Claude, ChatGPT, Grok, Copilot, Cursor and Kimi in one chat room. When one AI answers, another reviews it and corrects mistakes. Free during the beta.
+> A Mac app that puts Claude, ChatGPT, Grok, Copilot, Cursor and Kimi in one chat room. When one AI answers, another reviews it and corrects mistakes. Link a folder and the AIs create and edit files in a copy; your original changes only when you merge. Free during the beta.
 
 Konsel is a macOS app by LuluLabs Inc., free during the beta. It runs each AI company's official Mac program (Claude Code, Codex, Grok Build, GitHub Copilot CLI, Cursor CLI, Kimi Code CLI) with the user's own account, so several AIs answer and review each other in one chat. Conversations and memory stay on the user's Mac.
 
@@ -35,4 +35,4 @@ Use "Send feedback" on the My screen. In a chat, say "Tell them this is annoying
 
 ## 한국어
 
-Claude, ChatGPT, Grok, Copilot, Cursor, Kimi를 한 대화방에 연결하는 Mac 앱입니다. 한 AI가 답하면 다른 AI가 검토하고 틀린 부분을 바로잡습니다. 베타 기간에는 무료입니다.
+Claude, ChatGPT, Grok, Copilot, Cursor, Kimi를 한 대화방에 연결하는 Mac 앱입니다. 한 AI가 답하면 다른 AI가 검토하고 틀린 부분을 바로잡습니다. 폴더를 연결하면 AI들이 사본에서 파일을 만들고 고치고, 합치기를 누를 때만 원본에 들어갑니다. 베타 기간에는 무료입니다.
