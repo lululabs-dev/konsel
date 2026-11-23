@@ -22,7 +22,7 @@ During the beta you use Konsel without signing up. You sign in to each AI on its
 Only on your Mac. When an AI answers, the conversation is sent to that AI's provider (Anthropic, OpenAI, xAI, GitHub, Cursor or Moonshot AI). When you make images or videos, the prompt goes to the creative service you connected, such as Higgsfield. The company that makes Konsel never receives your conversations.
 
 ### Can the AIs change my files?
-The AIs can find and read files on your Mac. They cannot change or delete them.
+In a chat without a linked folder, the AIs only read files. When you link a folder, the AIs edit a copy of it, and the original changes only when you merge. You can undo a merge. Commands that change files outside the copy or go online ask for your permission first.
 
 ### Why does the sign-in page say Claude Code, Codex and so on?
 Konsel gets answers through each company's official Mac program: Claude Code from Anthropic for Claude, Codex from OpenAI for ChatGPT, Grok Build from xAI, GitHub Copilot CLI, Cursor CLI and Kimi Code CLI. You sign in with the accounts you already use for each AI.
