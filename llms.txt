@@ -1,6 +1,6 @@
 # Konsel
 
-> A Mac app that puts Claude, ChatGPT, Grok, Copilot and Cursor in one chat room. When one AI answers, another reviews it and corrects mistakes. Link a folder and the AIs create and edit files in a copy; your original changes only when you merge. Free during the beta.
+> A Mac app that puts Claude, ChatGPT, Grok, Copilot and Cursor in one chat room. Each AI answers, then they check each other's answers and fix mistakes. Link a folder and the AIs create and edit files in a copy; your original changes only when you merge. Free during the beta.
 
 Konsel is a macOS app by LuluLabs Inc., free during the beta. It runs each AI company's official Mac program (Claude Code, Codex, Grok Build, GitHub Copilot CLI, Cursor CLI) with the user's own account, so several AIs answer and review each other in one chat. Conversations and memory stay on the user's Mac.
 
@@ -13,7 +13,7 @@ Konsel is a macOS app by LuluLabs Inc., free during the beta. It runs each AI co
 ## Questions
 
 ### Does it cost anything?
-Konsel is free during the beta and may become paid after launch. We will tell you 30 days before. Each AI follows its own company's plans. Claude needs a paid plan such as Pro or Max, ChatGPT also works with a free account, and Grok needs SuperGrok or X Premium+. Each answer uses the plan usage of that account.
+Konsel is free during the beta and may become paid after launch. We will tell you 30 days before. Each AI follows its own company's plans. Claude needs a paid plan such as Pro or Max, ChatGPT also works with a free account, and Grok needs SuperGrok or X Premium+. Each answer uses the plan usage of that account. Credits come from your own account with that creation service. Tools that can use credits ask the first time they're used for each service in a chat, and not again in that chat.
 
 ### Do I need to sign up?
 During the beta you use Konsel without signing up. You sign in to each AI on its company's own sign-in page. Konsel does not receive or store your password.
@@ -22,7 +22,7 @@ During the beta you use Konsel without signing up. You sign in to each AI on its
 Only on your Mac. When an AI answers, the conversation is sent to that AI's provider (Anthropic, OpenAI, xAI, GitHub or Cursor). When you make images or videos, the prompt goes to the creative service you connected, such as Higgsfield. The company that makes Konsel never receives your conversations.
 
 ### Can the AIs change my files?
-In a chat without a linked folder, the AIs only read files. When you link a folder, the AIs edit a copy of it, and the original changes only when you merge. You can undo a merge until you push it to GitHub. Commands that change files outside the copy or go online ask for your permission first.
+In a chat without a linked folder, the AIs only read files. When you link a folder, the AIs edit a copy of it, and the original changes only when you merge. You can undo a merge until you push it to GitHub. Commands that change files outside the copy or go online ask for your permission first. They also ask before reading a web page or connecting to any address other than their own company's servers.
 
 ### Why does the sign-in page say Claude Code, Codex and so on?
 Konsel gets answers through each company's official Mac program: Claude Code from Anthropic for Claude, Codex from OpenAI for ChatGPT, Grok Build from xAI, GitHub Copilot CLI and Cursor CLI. You sign in with the accounts you already use for each AI.
@@ -35,4 +35,4 @@ Use "Send feedback" on the My screen. In a chat, say "Tell them this is annoying
 
 ## 한국어
 
-Claude, ChatGPT, Grok, Copilot, Cursor를 한 대화방에 연결하는 Mac 앱입니다. 한 AI가 답하면 다른 AI가 검토하고 틀린 부분을 바로잡습니다. 폴더를 연결하면 AI들이 사본에서 파일을 만들고 고칩니다. 바뀐 파일은 합치기를 누를 때만 원본에 들어갑니다. 베타 기간에는 무료입니다.
+Claude, ChatGPT, Grok, Copilot, Cursor를 한 대화방에 연결하는 Mac 앱입니다. AI들이 각자 답하고 서로의 답에서 틀린 부분을 찾아 바로잡습니다. 폴더를 연결하면 AI들이 사본에서 파일을 만들고 고칩니다. 바뀐 파일은 합치기를 누를 때만 원본에 들어갑니다. 베타 기간에는 무료입니다.
