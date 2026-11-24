@@ -13,7 +13,7 @@ Konsel is a macOS app by LuluLabs Inc., free during the beta. It runs each AI co
 ## Questions
 
 ### Does it cost anything?
-Konsel is free during the beta and may become paid after launch. We will tell you 30 days before. Each AI follows its own company's plans. Claude needs a paid plan such as Pro or Max, ChatGPT also works with a free account, and Grok needs SuperGrok or X Premium+. Each answer uses the plan usage of that account. Credits come from your own account with that creation service. Tools that can use credits ask the first time they're used for each service in a chat, and not again in that chat.
+Konsel is free during the beta and may become paid after launch. We will tell you 30 days before. Each AI follows its own company's plans. Claude needs a paid plan such as Pro or Max, ChatGPT also works with a free account, and Grok needs SuperGrok or X Premium+. Each answer uses the plan usage of that account. Credits come from your own account with that creative service. Each tool that can use credits asks the first time it's used in a chat, and not again in that chat.
 
 ### Do I need to sign up?
 During the beta you use Konsel without signing up. You sign in to each AI on its company's own sign-in page. Konsel does not receive or store your password.
